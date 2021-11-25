@@ -1,0 +1,87 @@
+$maincolor: rgb(90,33,34);
+$secondColor: rgb(170, 170, 170);
+
+.header {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0; top: 0; bottom:0;
+    width: 300px;
+    //background-color: $maincolor;
+    color: $secondColor;
+    border-right: solid 0.8rem rgb(158, 158, 158);
+      }
+  
+  &__top {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__profil {
+      &__img {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        border: solid 3px white;
+      }
+    }
+
+    &__social {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem ;
+      &__icon {
+        width: 30px;
+        height: 30px;
+        margin-left: 1rem;
+        border-radius: 100%;
+        filter: grayscale(100%) brightness(0%) invert(60%);
+     }
+      &__menu {
+        margin-left: 1rem;
+      }
+    }
+
+
+   
+  }
+
+  &__mid {
+    height: 70%;
+    width: 80%;
+    &__menu {
+      display: flex;
+      height: 60%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      &__item {
+      color: $secondColor;
+        &:hover {
+          color:$maincolor;
+          filter: saturate(255%) brightness(200%);
+        }
+      }
+    }
+  }
+
+  &__bot {
+    padding-bottom: 2rem;
+    color: $secondColor;
+    font-size: 1.2rem;
+    &__menu {
+      &__color {
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+      }
+    }
+  }
+}
