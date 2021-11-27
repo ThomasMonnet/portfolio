@@ -6,6 +6,8 @@ const Home = ({ openMenu, colorStyle, borderStyle, linkStyle }) => {
 
   return (
   <div className={openMenu ? "home" : "home__close"}>
+    <h1 className="title__page color" style={colorStyle}> Bienvenue sur le portfolio de Thomas MONNET</h1>
+    
     <iframe 
       src="https://www.youtube.com/embed/M0pOMVCUY50" 
       title="YouTube video player" 
@@ -16,7 +18,6 @@ const Home = ({ openMenu, colorStyle, borderStyle, linkStyle }) => {
       style={borderStyle}>
     </iframe>
 
-    <h1 className="home__title color" style={colorStyle}> Bienvenue sur le portfolio de Thomas MONNET</h1>
 
     <h2 className="home__title__second"> Vous êtes à la recherche d'un nouveau Développeur Web ? Vous êtes au bon endroit !</h2>
 

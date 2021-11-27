@@ -4,6 +4,8 @@ import Header from 'src/components/Header';
 import { Routes, Route } from 'react-router-dom';
 import Home from 'src/components/Home';
 import Projets from 'src/components/Projets';
+import Oldix from 'src/components/Oldix';
+import Experiences from 'src/components/Experiences'
 import { useState } from 'react';
 
 // == Composant
@@ -78,7 +80,9 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Home linkStyle={linkStyle} openMenu={openMenu} colorUser={colorUser} colorStyle={colorStyle} borderStyle={borderStyle}/>} exact />
       <Route path="/qui_suis_je" element={<Home openMenu={openMenu} colorUser={colorUser} colorStyle={colorStyle} borderStyle={borderStyle}/>} exact />
+      <Route path="/experiences" element={<Experiences openMenu={openMenu} borderStyle={borderStyle}/>} exact />
       <Route path="/projets" element={<Projets openMenu={openMenu}/>} exact />
+      <Route path="/projets/oldix" element={<Oldix openMenu={openMenu}/>} exact />
     </Routes>
   </div>
   )};
