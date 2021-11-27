@@ -1,8 +1,8 @@
 import './oldix.scss'
 
-const Oldix = () => (
-  <div className="oldix">
-    <iframe src="http://oldix.surge.sh" className="oldix__iframe"/>
+const Oldix = ({ openMenu }) => (
+  <div className={openMenu ? "projet" : "projet__close"}>
+    <iframe src="http://oldix.surge.sh" className="projet__iframe"/>
   </div>
 )
 
