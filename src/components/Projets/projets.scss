@@ -1,0 +1,34 @@
+$duration: 1s;
+
+.projets, .projets__close {
+  margin-left: 300px;
+  margin-top: 2rem;
+  min-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: $duration;
+
+  &__close {
+    margin-left: 80px;
+    transition: $duration;
+  }
+
+  &__item {
+    width: 250px;
+    height: 250px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    &__img {
+      width: 250px;
+      height: 250px;
+      background-color: rgb(65, 65, 65);
+      border-radius: 100%;
+    }
+    &__name {
+      text-align: center;
+      font-size: 3rem;
+      height: 4rem;
+    }
+  }
+}

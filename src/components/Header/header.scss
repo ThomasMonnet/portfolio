@@ -76,15 +76,18 @@ $duration: 1s;
       justify-content: space-between;
       align-items: center;
       margin-top: 2rem ;
+      transition: $duration;
       &__icon {
         width: 40px;
         height: 40px;
         margin-top: 1rem;
         border-radius: 100%;
         filter: grayscale(100%) brightness(0%) invert(60%);
-     }
+        transition: $duration;
+      }
       &__menu {
         margin-left: 1rem;
+        transition: $duration;
       }
     
       &__close {
@@ -92,6 +95,7 @@ $duration: 1s;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        transition: $duration;
       }
     }
 
@@ -110,6 +114,8 @@ $duration: 1s;
       
       &__item {
       color: $textColor;
+      text-transform: uppercase;
+      font-weight: bold;
         &:hover {
           filter: saturate(255%) brightness(200%);
         }

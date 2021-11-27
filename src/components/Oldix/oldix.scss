@@ -1,10 +1,22 @@
-.oldix {
+$duration: 1s;
+
+.projet {
   width: calc(100vw - 300px);
   height: 100vh;
   margin-left: 300px;
+  transition: $duration;
+
+  &__close {
+    width: calc(100vw - 80px);
+    height: 100vh;
+    margin-left: 80px;
+    transition: $duration;
+  }
+
 
   &__iframe {
     width: 100%;
     height: 100%;
+
   }
 }

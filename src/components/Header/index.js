@@ -32,7 +32,7 @@ const Header = ({openMenu, setOpenMenu, colorUser}) => {
           <a href="https://www.linkedin.com/in/thomas-monnet-b8154377/" target="_blank">
             <img className="header__top__social__icon" src={LinkedinIcon} alt="Linkedin" />
           </a>
-          <NavLink to="/me_contacter" exact>
+          <NavLink to="/me_contacter" key="contact" exact>
             <img className="header__top__social__icon" src={ContactIcon} alt="contact" />
           </NavLink>
         </div>

@@ -1,7 +1,9 @@
 $duration: 1s;
 
-.Home, .Home__close {
+.home, .home__close {
   margin-left: 300px;
+  margin-bottom: 2rem;
+  min-width: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,14 +19,59 @@ $duration: 1s;
     font-size: 1.8rem;
     text-transform: uppercase;
     text-align: justify;
+
+    &__second {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: justify, left;
+    width: 75%;
+
+    &__list {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      display: flex;
+      width: 75%;
+      justify-content: space-between;
+      &__item {
+        line-height: 2rem;
+          &__img {
+            width: 200px;
+            height: auto;
+          }
+
+          &__name {
+            text-align: center;
+          }
+      }
+
+    }
   }
 }
 
 .video__yt {
-  width: 50%;
-  height: 50vh;
-  margin-top: 6rem;
+  width: 640px;
+  height: 360px;
+  margin-top: 5rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border-radius: 15px;
+  transition: $duration;
+
+  &__close {
+    width: 768px;
+    height: 432px;
+    margin-top: 4rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 15px;
+    transition: $duration;
+  }
 }
 

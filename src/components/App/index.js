@@ -3,7 +3,7 @@ import './styles.scss';
 import Header from 'src/components/Header';
 import { Routes, Route } from 'react-router-dom';
 import Home from 'src/components/Home';
-import Oldix from 'src/components/Oldix';
+import Projets from 'src/components/Projets';
 import { useState } from 'react';
 
 // == Composant
@@ -17,14 +17,8 @@ const App = () => {
       const background = document.querySelector('.background');
       if (background) {
         background.style.background = event.target.value;
+        //localStorage.setItem('userColor', event.target.value);
       }
-    };
-  
-    const changeBackground = () => {
-      colorUser = document.querySelector('#colorUser');
-      colorUser.value = defaultColor;
-      colorUser.addEventListener('input', updateBackground, false);
-      colorUser.select();
     };
 
     const updateColor = (event) => {
@@ -37,26 +31,40 @@ const App = () => {
     const changeColor = () => {
       colorUser = document.querySelector('#colorUser');
       colorUser.value = defaultColor;
+      colorUser.addEventListener('input', updateBackground, false);
       colorUser.addEventListener('input', updateColor, false);
+      colorUser.addEventListener('input', updateBorder, false);
+      colorUser.addEventListener('input', updateLink, false);
       colorUser.select();
     };
-  
+
+    const colorStyle = {
+      color: defaultColor
+    }
+    
+    const updateLink = (event) => {
+      const link = document.querySelector('.link');
+      if (link) {
+        link.style.color = event.target.value;
+      }
+    };
+    
+    const linkStyle = {
+      color: defaultColor,
+      fontSize: "1.5rem",
+    }
+
     const updateBorder = (event) => {
       const border = document.querySelector('.border');
       if (border) {
-        border.style.border = event.target.value;
+        border.style.border = "solid 3px" + event.target.value;
       }
     };
-  
-    const changeBorder = () => {
-      colorUser = document.querySelector('#colorUser');
-      colorUser.value = defaultColor;
-      colorUser.addEventListener('input', updateBorder, false);
-      colorUser.select();
-    };
-  
-    window.addEventListener('load', changeBorder, false);
-    window.addEventListener('load', changeBackground, false);
+
+    const borderStyle = {
+      border: "solid 4px" + defaultColor
+    }
+
     window.addEventListener('load', changeColor, false)
 
 // ************************ VARIABLE D'ETAT D'OUVERTURE DU MENU ************************ //
@@ -68,9 +76,9 @@ const App = () => {
   <div className="app">
     <Header openMenu={openMenu} setOpenMenu={setOpenMenu} colorUser={colorUser}/>
     <Routes>
-      <Route path="/" element={<Home openMenu={openMenu} colorUser={colorUser} />} exact />
-      <Route path="/Home" element={<Home />} exact />
-      <Route path="/projets/oldix" element={<Oldix />} exact />
+      <Route path="/" element={<Home linkStyle={linkStyle} openMenu={openMenu} colorUser={colorUser} colorStyle={colorStyle} borderStyle={borderStyle}/>} exact />
+      <Route path="/qui_suis_je" element={<Home openMenu={openMenu} colorUser={colorUser} colorStyle={colorStyle} borderStyle={borderStyle}/>} exact />
+      <Route path="/projets" element={<Projets openMenu={openMenu}/>} exact />
     </Routes>
   </div>
   )};
