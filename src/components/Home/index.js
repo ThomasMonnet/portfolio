@@ -3,6 +3,7 @@ import technosData from 'src/data/technos';
 import { NavLink } from 'react-router-dom';
 
 const Home = ({ openMenu, colorStyle, borderStyle, linkStyle }) => {
+  const defaultColor ='#6d1c1e';
 
   return (
   <div className={openMenu ? "home" : "home__close"}>
@@ -57,8 +58,8 @@ const Home = ({ openMenu, colorStyle, borderStyle, linkStyle }) => {
     </p>
     <h2 className="home__title__second">Par où commencer ?</h2>
     <p className="home__text">
-      Je vous propose de commencer par apprendre à mieux ce connaître, pour cela, je vous donne rendez vous sur la page 
-      <NavLink className="home__text link" 
+      Je vous propose de commencer par apprendre à mieux ce connaître, pour cela, je vous donne rendez vous sur la page   
+      <NavLink className="link" 
         style={linkStyle} 
         to="qui_suis_je" 
         key="qui_suis_je" 

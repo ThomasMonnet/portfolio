@@ -6,11 +6,10 @@ import Arrow from 'src/assets/img/arrow.png'
 import menuData from 'src/data/menu';
 import { NavLink } from 'react-router-dom';
 import './header.scss';
-import { useState } from 'react';
 
 const Header = ({openMenu, setOpenMenu, colorUser}) => {
 
-  const defaultColor ='#5a2122';
+  const defaultColor ='#6d1c1e';
   // ************************ ETAT DE L'OUVERTURE DU MENU ************************ //  
   const changeOpenMenu = () => {
     setOpenMenu(!openMenu)

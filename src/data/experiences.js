@@ -25,7 +25,7 @@ export default [
     date: '2017-2018',
     type: 'Acheteur / Vendeur',
     enterprise: "Planet Cash",
-    text: "En tant qu'Acheteur / Vendeur chez Planet Cash, j'avais pour mission... d'acheter et de revendre des produits. Super, non ? En tout cas, cette expérience m'a permis de grandement m'améliorer sur la négociation, l'entretien d'un magasin et de ses rayons, le travail en équipe, et j'ai même eu l'occasion de former un apprenti !",
+    text: "Etre Acheteur / Vendeur chez Planet Cash signifie... acheter et revendre des produits. Super, non ? En tout cas, cette expérience m'a permis de grandement m'améliorer sur la négociation, l'entretien d'un magasin et de ses rayons, le travail en équipe, et j'ai même eu l'occasion de former un apprenti !",
     img: PlanetCash,
   },
   {
@@ -39,21 +39,21 @@ export default [
     date: '2013-2014',
     type: 'Téléprospecteur en Apprentissage',
     enterprise: "NRC",
-    text: "Ma dernière expérience dans le domaine du commerce consistait à développer un magasin d'informatique qui venait d'ouvrir sous le nom LDLC. Le travail en équipe a été l'un des points clé qui nous a permis de réussir cette mission. Mon rôle consistait à faire l'accueil de la clientèle, gérer les caisses et la réserve, développer les rayons et faire de la réparation informatique",
+    text: "Chez NRC, j'avais pour mission de prospecter des clients potentiels professionnels par téléphone. Nous proposions du matériel informatique ainsi que des logiciels de gestion, notamment SAGE. Mon but était de convaincre les prospects de prendre un rendez-vous physique avec l'un de nos commerciaux de terrain afin qu'il puisse lui faire une présentation approfondie de nos solutions.",
     img: NRC
   },
   {
     date: '2012-2013',
     type: 'Technico-Commercial BtoB en Apprentissage',
     enterprise: "CTEC France",
-    text: "Ma dernière expérience dans le domaine du commerce consistait à développer un magasin d'informatique qui venait d'ouvrir sous le nom LDLC. Le travail en équipe a été l'un des points clé qui nous a permis de réussir cette mission. Mon rôle consistait à faire l'accueil de la clientèle, gérer les caisses et la réserve, développer les rayons et faire de la réparation informatique",
+    text: "CTEC France est une entreprise qui vend des solutions de nettoyage industriel. J'avais pour mission de prospecter et commercialiser les produits auprès de clients professionnels. C'est d'ailleurs à ce moment là que j'ai développer mon premier site intranet : ce dernier avait pour objectif de regrouper tous nos clients sur une carte Google Maps avec toutes leurs commandes",
     img: CTEC
   },
   {
     date: '2010-2012',
     type: 'Employé Polyvalent',
     enterprise: "McDonald's Lomme",
-    text: "Ma dernière expérience dans le domaine du commerce consistait à développer un magasin d'informatique qui venait d'ouvrir sous le nom LDLC. Le travail en équipe a été l'un des points clé qui nous a permis de réussir cette mission. Mon rôle consistait à faire l'accueil de la clientèle, gérer les caisses et la réserve, développer les rayons et faire de la réparation informatique",
+    text: "Lorsque j'étais employé polyvalent chez McDonald's, mes missions étaient diverses : Accueil de la clientèle, prise de commandes, préparation des commandes, entretien de la salle ou encore, lors d'un stage, l'organisation du planning du personnel",
     img: McDo
   },
 ];
