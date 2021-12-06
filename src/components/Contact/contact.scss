@@ -134,3 +134,54 @@
 }
 }
 
+@media screen and (max-width: 1024px), (orientation: portrait) {
+
+  .contact {
+    &__container {
+      margin-top: 0px;
+      width: 90vw;
+      height: 90vh;
+
+      &__title {
+        font-size: 1.2rem;
+      }
+
+      &__text {
+        width: 95%;
+        &__title {
+          font-size: 1rem;
+          font-weight: unset;
+        }
+        &__info {
+          font-size: 0.9rem;
+          overflow-wrap: break-word;
+        }
+      }
+
+      &__img {
+        width: 40vw;
+        border-radius: 10%;
+      }
+
+      &__form{  
+        &__item {
+          &__label {
+            font-size: 0.9rem;
+          }
+          &__input {
+            width: 80%;
+            min-width: 80%;
+          }
+          &__textarea {
+            width: 80%;
+            min-width: 80%;
+            max-width: 80%;
+            min-height: 20%;
+            max-height: 250px;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -11,7 +11,7 @@ export default [
     date: '2021',
     type: 'Développeur React',
     enterprise: "O'Clock",
-    text: "Dans le cadre de ma formation, j'ai eu comme mission de réaliser un projet de groupe. Nous avons donc travailler sur Oldix, un site de streaming, concurrent de Netflix, composé de films libres de droit. Nous avons travaillé à 5 (3 back et 2 front) pour réaliser ce projet.",
+    text: "Dans le cadre de ma formation, j'ai eu comme mission de réaliser un projet de groupe. Nous avons donc travaillé sur Oldix, un site de streaming, concurrent de Netflix, composé de films libres de droit. Nous avons travaillé à 5 (3 back et 2 front) pour réaliser ce projet.",
     img: Oldix,
   },
   {

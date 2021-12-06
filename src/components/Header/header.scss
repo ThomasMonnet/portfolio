@@ -3,8 +3,8 @@ $duration: 1s;
 
 .header {
   
-
   &__container, &__container__close {
+    z-index: 100;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
