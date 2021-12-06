@@ -4,7 +4,6 @@ $duration: 1s;
   margin-left: 300px;
   margin-top: 2rem;
   min-width: 900px;
-  //height: 95vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -30,6 +29,37 @@ $duration: 1s;
       text-align: center;
       font-size: 2rem;
       height: auto;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px), (orientation: portrait) {
+  .projets, .projets__close {
+    margin-left: 0px;
+    margin-top: 250px;
+    min-width: 0px;
+    width: 100vw;
+    flex-direction: column;
+    
+    &__close {
+      margin-top: 50px;
+    }
+    
+    &__item {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3rem;
+      &__img {
+        width: 65vw;
+        height: 65vw;
+      }
+      &__name {
+        font-size: 3rem;
+      }
     }
   }
 }

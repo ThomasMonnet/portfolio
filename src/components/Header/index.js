@@ -37,7 +37,7 @@ const Header = ({openMenu, setOpenMenu, colorUser}) => {
         </div>
       </div>
       <div className="header__mid">
-        <nav className="header__mid__menu">
+        <nav className={openMenu ? "header__mid__menu" : "header__mid__menu__close"}>
           {menuData.map((menu) => (
             <div className="header__mid__menu__container">
               <NavLink

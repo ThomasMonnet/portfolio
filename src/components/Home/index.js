@@ -8,9 +8,8 @@ const Home = ({ openMenu, colorStyle, borderStyle, linkStyle }) => {
   return (
   <div className={openMenu ? "home" : "home__close"}>
     <h1 className="title__page color" style={colorStyle}> Bienvenue sur le portfolio de Thomas MONNET</h1>
-    
     <iframe 
-      src="https://www.youtube.com/embed/M0pOMVCUY50" 
+      src="https://www.youtube.com/embed/9_9UKJQxYrE" 
       title="YouTube video player" 
       frameborder="0" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

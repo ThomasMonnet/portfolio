@@ -106,7 +106,7 @@ $duration: 1s;
   &__mid {
     height: 70%;
     width: 80%;
-    &__menu {
+    &__menu, &__menu__close {
       display: flex;
       height: 60%;
       flex-direction: column;
@@ -164,4 +164,114 @@ $duration: 1s;
       }
     }
   }
+}
+
+
+@media screen and (max-width: 1024px), (orientation: portrait) {
+.header {
+  &__container, &__container__close {
+    flex-direction: row;
+    position: fixed;
+    justify-content: flex-start;
+    left: 0; top: 0; bottom: 0;
+    width: 100vw;
+    max-width: 100vw;
+    height: 250px;
+    border-right: none;
+    border-bottom: solid 0.4rem rgb(158, 158, 158);
+    
+    &__close {
+      height: 50px;
+    }
+  }
+
+  &__top {
+    margin-top: 0;
+    align-items: flex-start;
+    margin-left: 1rem;
+    width: 100px;
+
+    &__profil {
+      &__img {
+        width: 50px;
+        height: 50px;
+        border: solid 2px white;
+      }
+
+      &__special {
+        &__close {
+          margin-top: 0rem;
+          width: 35px;
+          height: 35px;
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    &__social {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 0rem;
+      margin-left: 0.7rem;
+      transition: 0ms;
+      &__icon {
+        width: 30px;
+        height: 30px;
+        transition: 0ms;
+      }    
+      &__close {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+        transition: 0ms;
+      }
+    }
+  }
+
+  &__mid {
+    height: 150%;
+    width: 100%;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__menu {
+      width: 75%;
+
+      &__close {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+      }
+
+      &__special {
+        &__close {
+          font-size: 2rem;
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+  
+  &__bot {
+    padding-bottom: 0rem;
+    color: $textColor;
+    font-size: 1.2rem;
+    align-items: center;
+    &__menu {
+      &__color {
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+      }
+
+      &__close {
+        
+        font-size: 1.8rem;
+        font-weight: 800;
+      }
+    }
+  }
+}
 }

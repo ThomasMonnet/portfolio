@@ -20,3 +20,19 @@ $duration: 1s;
 
   }
 }
+
+@media screen and (max-width: 1024px), (orientation: portrait) {
+  .projet {
+    width: 100vw;
+    height: calc(100vh - 250px);
+    margin-left: 0px;
+    margin-top: 250px;
+  
+    &__close {
+      width: 100vw;
+      height: calc(100vh - 50px);
+      margin-left: 0px;
+      margin-top: 50px;
+    }
+  }
+}

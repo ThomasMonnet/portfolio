@@ -6,8 +6,6 @@ import { NavLink } from 'react-router-dom';
 const Qui = ({ openMenu, colorStyle, borderStyle, linkStyle }) => {
 
   const backgroundImageStyle = {
-    width: "75%",
-    height: "300px",
     backgroundImage: "url(" + Background + ")"
   }
 
@@ -16,7 +14,7 @@ const Qui = ({ openMenu, colorStyle, borderStyle, linkStyle }) => {
     <h1 className="title__page color" style={colorStyle}>Qui suis-je ?</h1>
     
     <iframe 
-      src="https://www.youtube.com/embed/M0pOMVCUY50" 
+      src="https://www.youtube.com/embed/Z6Yano4Y-l4" 
       title="YouTube video player" 
       frameborder="0" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
