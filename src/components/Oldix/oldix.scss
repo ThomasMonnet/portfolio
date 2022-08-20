@@ -6,6 +6,15 @@ $duration: 1s;
   margin-left: 300px;
   transition: $duration;
 
+  &__title {
+    &__error {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
   &__close {
     width: calc(100vw - 80px);
     height: 100vh;

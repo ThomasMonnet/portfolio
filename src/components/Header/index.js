@@ -1,71 +1,42 @@
 import Profil from 'src/assets/img/profil.jpeg';
-import GithubIcon from 'src/assets/img/github_icon.png';
-import LinkedinIcon from 'src/assets/img/linkedin_icon.png';
-import ContactIcon from 'src/assets/img/contact_icon.png';
 import Arrow from 'src/assets/img/arrow.png'
 import menuData from 'src/data/menu';
 import { NavLink } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+import reseauxData from 'src/data/reseaux'
+import Button from 'react-bootstrap/Button';
+import Modal from 'react'
 import './header.scss';
 
-const Header = ({openMenu, setOpenMenu, colorUser}) => {
+const Header = ({ }) => {
 
-  const defaultColor ='#6d1c1e';
   // ************************ ETAT DE L'OUVERTURE DU MENU ************************ //  
-  const changeOpenMenu = () => {
-    setOpenMenu(!openMenu)
-  }
   
   // ************************ AFFICHAGE DU SITE ************************ //
 
   return (
-    <div className={openMenu ? "header__container background" : "header__container__close background"} style={{ background: defaultColor }}>
-      <div className="header__top">
-        <div className="header__top__profil">
-          <img className={openMenu ? "header__top__profil__img" : "header__top__profil__img__close" } src={Profil} alt="Profil" onClick={changeOpenMenu}/>
-          <img className={openMenu ? "header__top__profil__special" : "header__top__profil__special__close background"} onClick={changeOpenMenu} src={Arrow} alt="arrow" />
-        </div>
-        <div className={openMenu ? "header__top__social" : "header__top__social__close"}>
-          <a href="https://github.com/ThomasMonnet?tab=repositories" target="_blank">
-            <img className="header__top__social__icon" src={GithubIcon} alt="Github" />
-          </a>
-          <a href="https://www.linkedin.com/in/thomas-monnet-b8154377/" target="_blank">
-            <img className="header__top__social__icon" src={LinkedinIcon} alt="Linkedin" />
-          </a>
-          <NavLink to="/me_contacter" key="contact" exact>
-            <img className="header__top__social__icon" src={ContactIcon} alt="contact" />
-          </NavLink>
-        </div>
-      </div>
-      <div className="header__mid">
-        <nav className={openMenu ? "header__mid__menu" : "header__mid__menu__close"}>
-          {menuData.map((menu) => (
-            <div className="header__mid__menu__container">
-              <NavLink
-                className={openMenu ? "header__mid__menu__item" : "header__mid__menu__item__close"}
-                to={menu.route}
-                key={menu.label}
-                activeClassName="header__mid__menu__item__selected"
-                exact
-              >
-                <p className={openMenu ? "header__mid__menu__special" : "header__mid__menu__special__close"}>&#9830;</p>
-                {menu.label}
-              </NavLink>
-            </div>
-          ))}
-        </nav>
-      </div>
-      <div className="header__bot">
-        <>{ /* eslint-disable-next-line jsx-a11y/label-has-associated-control */ }</>
-        {openMenu ? <label className="header__bot__menu" htmlFor="colorUser">
-          Changer la couleur
-        </label>
-        :
-        <label className="header__bot__menu__close" htmlFor="colorUser">
-          &#35;
-        </label>
-        }
-        <input className="header__bot__menu__color" type="color" id="colorUser" name="head" value={colorUser} />
-      </div>
+    <div className={"header__container"} >
+      <Card className="header__top__card">
+        <Card.Img className="header__top__pdp" src={Profil}></Card.Img>
+        <Card.Title className="header__top__title">Thomas Monnet</Card.Title>
+      </Card>
+      <div className="separator"></div>
+      <Card>
+      <ul className="menu__ul">
+        {menuData.map((data, id) =>
+        <NavLink key="{id}" to={data.route}>
+          <li className="menu__li">
+            {data.label}
+          </li>
+        </NavLink>)}
+      </ul>
+      </Card>
+      <div className="separator"></div>
+          <Card>
+            {reseauxData.map((reseaux, key) =>
+            <h1 key="{key}">{reseaux.url}</h1>
+            )}
+          </Card>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import './formations.scss'
 import formationsData from 'src/data/formations'
 
-const Formations = ({ openMenu, borderStyle }) => (
+const Formations = ({ openMenu}) => (
   <div>
     <ul className={openMenu ? "exp" : "exp__close"}>
       <h1 className="title__page color">Mes formations</h1>
@@ -11,8 +11,7 @@ const Formations = ({ openMenu, borderStyle }) => (
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
           allowFullScreen 
-          className={openMenu ? "video__yt border" : "video__yt__close border"} 
-          style={borderStyle}>
+          className={openMenu ? "video__yt border" : "video__yt__close border"} >
         </iframe>
         {formationsData.map((form) => (
           <div className="form__item__container">

@@ -2,12 +2,11 @@ import 'src/components/Home/home.scss';
 import technosData from 'src/data/technos';
 import { NavLink } from 'react-router-dom';
 
-const Home = ({ openMenu, colorStyle, borderStyle, linkStyle }) => {
-  const defaultColor ='#6d1c1e';
+const Home = ({ openMenu }) => {
 
   return (
   <div className={openMenu ? "home" : "home__close"}>
-    <h1 className="title__page color" style={colorStyle}> Bienvenue sur le portfolio de Thomas MONNET</h1>
+    <h1 className="title__page color"> Bienvenue sur le portfolio de Thomas MONNET</h1>
     <iframe 
       src="https://www.youtube.com/embed/9_9UKJQxYrE" 
       title="YouTube video player" 
@@ -15,7 +14,7 @@ const Home = ({ openMenu, colorStyle, borderStyle, linkStyle }) => {
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowFullScreen 
       className={openMenu ? "video__yt border" : "video__yt__close border"} 
-      style={borderStyle}>
+      >
     </iframe>
 
 
@@ -59,7 +58,6 @@ const Home = ({ openMenu, colorStyle, borderStyle, linkStyle }) => {
     <p className="home__text">
       Je vous propose de commencer par apprendre à mieux ce connaître, pour cela, je vous donne rendez vous sur la page   
       <NavLink className="link" 
-        style={linkStyle} 
         to="qui_suis_je" 
         key="qui_suis_je" 
         exact 

@@ -40,6 +40,7 @@ $duration: 1s;
       margin-top: 3rem;
       background-size: cover;
       margin-bottom: 3rem;
+      
     }
 
     &__list {
@@ -54,6 +55,7 @@ $duration: 1s;
           &__img {
             width: 200px;
             height: auto;
+            border-radius: 100%;
           }
 
           &__name {
