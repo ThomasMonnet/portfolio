@@ -10,7 +10,7 @@ const Qui = ({ openMenu, colorStyle, borderStyle, linkStyle }) => {
   }
 
   return (
-  <div className={openMenu ? "home" : "home__close"}>
+  <div className={openMenu ? "home animation" : "home__close animation"}>
     <h1 className="title__page color" style={colorStyle}>Qui suis-je ?</h1>
     
     <iframe 

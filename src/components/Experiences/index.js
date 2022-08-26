@@ -3,7 +3,7 @@ import experiencesData from 'src/data/experiences'
 
 const Experiences = ({ openMenu, borderStyle }) => (
   <div>
-  <ul className={openMenu ? "exp" : "exp__close"}>
+  <ul className={openMenu ? "exp animation" : "exp__close animation"}>
   <h1 className="title__page color">Mes expériences</h1>
   <iframe 
       src="https://www.youtube.com/embed/eMuklhI9s0I" 

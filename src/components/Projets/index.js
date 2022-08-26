@@ -2,7 +2,7 @@ import './projets.scss';
 import projetsData from 'src/data/projets'
 
 const Projets = ({ openMenu }) => (
-  <ul className={openMenu ? "projets" : "projets__close"}>
+  <ul className={openMenu ? "projets animation" : "projets__close animation"}>
   {projetsData.map((projet) => (
     <li className="projets__item">
       <a href={projet.link}>

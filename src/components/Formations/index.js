@@ -3,7 +3,7 @@ import formationsData from 'src/data/formations'
 
 const Formations = ({ openMenu}) => (
   <div>
-    <ul className={openMenu ? "exp" : "exp__close"}>
+    <ul className={openMenu ? "exp animation" : "exp__close animation"}>
       <h1 className="title__page color">Mes formations</h1>
       <iframe 
           src="https://www.youtube.com/embed/Q9K-l2na9zU" 
