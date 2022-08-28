@@ -23,7 +23,7 @@ const Menu = () => {
         <a href="#accueil"><div className="new__menu__circle new__menu__circle__accueil"><h1 className="new__menu__title">Accueil</h1></div></a>
         <a href="#exp__comm"><div className="new__menu__circle new__menu__circle__qui"><h1 className="new__menu__title">Un ancien commercial</h1></div></a>
         <a href="#reconversion"><div className="new__menu__circle new__menu__circle__formations"><h1 className="new__menu__title">Développeur en reconversion</h1></div></a>
-        <div className="new__menu__circle new__menu__circle__experiences"><h1 className="new__menu__title">Des projets</h1></div>
+        <a href="#projets"><div className="new__menu__circle new__menu__circle__experiences"><h1 className="new__menu__title">Des projets</h1></div></a>
         <div className="new__menu__circle new__menu__circle__projets"><h1 className="new__menu__title">Me contacter</h1></div>
       </div>
     </div>

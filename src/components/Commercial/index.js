@@ -148,8 +148,8 @@ const displayIUT = () => {
         <Card.Img src={IUT} className={openIUT ? "commercial__experiences__img__selected" : "commercial__experiences__img"} onMouseEnter={displayIUT}></Card.Img>
         <div className="commercial__experiences__img__empty"></div>
       </div>
+      
       <div className="commercial__experiences__text__container">
-
         <div className={openMcDo? "commercial__experiences__text" : "hidden"}>
           <Card.Text className="commercial__experiences__title">McDonald's Lomme</Card.Text>
           <Card.Title className="commercial__card__title">Employé Polyvalent</Card.Title>

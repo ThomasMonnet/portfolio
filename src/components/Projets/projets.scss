@@ -1,34 +1,15 @@
 $duration: 1s;
 
-.projets, .projets__close {
-  margin-left: 300px;
-  margin-top: 2rem;
-  min-width: 900px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  transition: $duration;
-
-  &__close {
-    margin-left: 80px;
-    transition: $duration;
-  }
-
-  &__item {
-    width: 250px;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    &__img {
-      width: 250px;
-      height: 250px;
-      border-radius: 100%;
-      cursor: pointer;
+.projets {
+  &__img {
+    &__big {
+      width: 800px;
+      height: 600px
     }
-    &__name {
-      text-align: center;
-      font-size: 2rem;
-      height: auto;
+
+    &__little {
+      width: 192px;
+      height: 108px;
     }
   }
 }
