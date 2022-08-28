@@ -1,0 +1,55 @@
+.new {
+  &__menu {
+    position: fixed;
+    left: 275px;
+    top:10%;
+
+    &__barre {
+      width: 4px;
+      height: 80vh;
+      position: absolute;
+      background-color: white;
+      border-radius: 100%;
+      display: flex;
+      justify-content:center;
+
+    }
+
+    &__circle {
+      width: 20px;
+      height: 20px;
+      border: solid 2px white;
+      background-color: rgb(137, 0, 201);
+      border-radius: 100%;
+      position: absolute;
+      left: -8px;
+
+      &__accueil {
+      top: 5vh;
+      }
+
+      &__qui {
+        top: 22.5vh;
+      }
+
+      &__formations {
+        top: 40vh;
+      }
+
+      &__experiences {
+        top: 57.5vh;
+      }
+
+      &__projets {
+        top: 75vh;
+      }
+    }
+
+    &__title {
+      position: relative;
+      left: 30px;
+      font-size: 0.9rem;
+      width: 125px;
+    }
+  }
+}

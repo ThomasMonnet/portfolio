@@ -1,0 +1,36 @@
+.reconversion {
+  &__card {
+    display: flex;
+    justify-content: center;
+
+    &__separator {
+      width: 50%;
+    }
+    &__text {
+      margin: 1.5rem 0rem;
+      font-size: 0.8rem;
+      &__strong {
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin-bottom: 0.2rem;
+
+        &__second {
+          font-weight:700;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+}

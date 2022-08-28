@@ -1,16 +1,61 @@
 import './qui.scss';
-import Background from 'src/assets/img/web_dev.jpg';
-import connaissancesData from 'src/data/connaissances';
-import { NavLink } from 'react-router-dom';
+import Card from 'react-bootstrap/Card'
+import { useEffect } from 'react';
 
-const Qui = ({ openMenu, colorStyle, borderStyle, linkStyle }) => {
+const Qui = () => {
 
-  const backgroundImageStyle = {
-    backgroundImage: "url(" + Background + ")"
+useEffect(() => {
+  let word = document.getElementById("writer__word");
+  let wordIndex = 0;
+  let wordsArray = [
+    "Front End !",
+    "React !",
+    "passionné !",
+    "sérieux !",
+    "investit !",
+    "motivé !",
+    "rigoureux !",
+  ];
+
+  const typewriter = () => {
+    let currentWord = wordsArray[wordIndex];
+
+    for (let i = 0; i < currentWord.length; i++) {
+      setTimeout(() => {
+        word.innerHTML += currentWord[i];
+      }, 85 * i);
+      if (i === currentWord.length - 1) {
+        word.innerHTML = "";
+        wordIndex === wordsArray.length - 1 ? (wordIndex = 0) : wordIndex++;
+        setTimeout(() => {
+          typewriter();
+        }, 3000);
+      }
+    }
   }
+  setTimeout(() => {
+    typewriter();
+  }, 2000);
+}, []);
 
   return (
-  <div className={openMenu ? "home animation" : "home__close animation"}>
+  <div className="qui" id="accueil">
+        <Card.Title className="qui__card__title">
+         Bonjour, je suis Thomas,
+        </Card.Title>
+        <Card.Text className="qui__card__text">
+          Développeur <span id="writer__word"></span>
+        </Card.Text>
+      <div className="arrow__bottom__container">
+        <div className="arrow__bottom"></div>
+      </div>
+  </div>
+)};
+
+// == Export
+export default Qui;
+
+  /* <div className={openMenu ? "home animation" : "home__close animation"}>
     <h1 className="title__page color" style={colorStyle}>Qui suis-je ?</h1>
     
     <iframe 
@@ -73,9 +118,4 @@ const Qui = ({ openMenu, colorStyle, borderStyle, linkStyle }) => {
     <p className="home__text">
       Mon objectif actuel est de trouver un emploi de Développeur Web avec une préférence pour continuer de développer mes compétences sur la technologie React. Pour autant, je suis ouvert aux propositions de stage, d'alternance, de CDD et de CDI. En attendant cette opportunité, je continuerai d'alimenter ce site avec différents projets que je réaliserai seul ou avec des collègues. 
     </p>
-  </div>
-
-)};
-
-// == Export
-export default Qui;
+  </div> */

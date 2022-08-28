@@ -159,11 +159,14 @@ $duration: 1s;
 .intro {
 
   &__title {
+    &__container {
+      margin-left: -155px;
+    }
     &__page {
       &__1 {
         animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
         position: absolute;
-        width: calc(100vw - 220px);
+        width: calc(100vw - 375px);
         height: 100vh;
         display: flex;
         justify-content: center;
@@ -179,7 +182,7 @@ $duration: 1s;
 
       &__2 {
 	      animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3.5s both;
-        width: calc(100vw - 220px);
+        width: calc(100vw - 375px);
         height: 100vh;
         display: flex;
         justify-content: center;
@@ -195,7 +198,7 @@ $duration: 1s;
       }
       &__3 {
 	      animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 6.5s both;
-        width: calc(100vw - 220px);
+        width: calc(100vw - 375px);
         height: 100vh;
         display: flex;
         justify-content: center;
@@ -211,7 +214,7 @@ $duration: 1s;
       }
       &__4 {
 	      animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 9.5s both;
-        width: calc(100vw - 220px);
+        width: calc(100vw - 375px);
         height: 100vh;
         display: flex;
         justify-content: center;
@@ -219,7 +222,7 @@ $duration: 1s;
         position: absolute;
 
         &__text{
-          animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 11.5s reverse both;
+          animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 50s reverse both;
           font-size: 8rem;
           text-align: center;
           word-spacing: 5rem;

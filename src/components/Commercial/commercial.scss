@@ -1,0 +1,69 @@
+.commercial {
+  &__card {
+      width: 90%;
+      background: linear-gradient(135deg, rgb(0, 0, 0, 0.5), rgb( 0, 0, 0, 0));
+      border-radius: 15px;
+      padding: 1rem;
+      margin-top: 2rem; 
+
+    &__text {
+      text-align: justify;
+      padding: 1rem
+    }
+    &__title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    text-align: center;
+
+    &__second {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+
+  &__experiences {
+    &__text {
+      display: flex;
+      justify-content: center;
+    }
+    &__img {
+      width: 150px;
+      padding: 0.5rem;
+      height: auto;
+      border-radius: 100%;
+      background-color: white;
+      transform: scale(0.8);
+      transition: 500ms;
+      border: 5px solid transparent;
+      &__container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2rem;
+      }
+
+      &__selected {
+      background-color: white;
+      width: 150px;
+      padding: 0.5rem;
+      height: auto;
+      border-radius: 100%;
+      border: 5px solid rgb(137, 0, 201);
+      transform: scale(1.1);
+      transition: 500ms;
+      } 
+
+    }
+  }
+}
+
+
+.hidden {
+  display: none;
+}
