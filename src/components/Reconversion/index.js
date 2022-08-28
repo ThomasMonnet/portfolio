@@ -1,63 +1,124 @@
 import './reconversion.scss'
+import oClock from "src/assets/img/oclock.png"
+import React from "src/assets/img/react_icon.png"
+import Apo from 'src/assets/img/oclock.png'
 import { Card } from 'react-bootstrap'
 import { useState, useEffect } from 'react';
 
-const Reconversion = () => (
+const Reconversion = () => {
+  
+const [ open1, setOpen1 ] = useState(true);
+const [ open2, setOpen2 ] = useState(false);
+const [ open3, setOpen3 ] = useState(false);
+const [ openReact, setOpenReact ] = useState(false);
+const [ openApo, setOpenApo ] = useState(false);
+  
+  const display1 = () => {
+    setOpen1(true);
+    setOpen2(false);
+    setOpen3(false);
+    setOpenReact(false);
+    setOpenApo(false);
+  }
+  
+  const display2 = () => {
+    setOpen1(false);
+    setOpen2(true);
+    setOpen3(false);
+    setOpenReact(false);
+    setOpenApo(false);
+  }
+  
+  const display3 = () => {
+    setOpen1(false);
+    setOpen2(false);
+    setOpen3(true);
+    setOpenReact(false);
+    setOpenApo(false);
+  }
+  
+  const displayReact = () => {
+    setOpen1(false);
+    setOpen2(false);
+    setOpen3(false);
+    setOpenReact(true);
+    setOpenApo(false);
+  }
+  
+  const displayApo = () => {
+    setOpen1(false);
+    setOpen2(false);
+    setOpen3(false);
+    setOpenReact(false);
+    setOpenApo(true);
+  }
+
+  const bgNumber = {
+    backgroundImage: `url(${oClock})`,
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat'
+  }
+  
+  return (
   <div className="page__size" id="reconversion">
     <div className="page__espace"></div>
-    <Card.Title className="reconversion__title">Une reconversion qui débute officiellement en Juin 2021</Card.Title>
-    <div className="reconversion__card">
-      <Card className="card__page">
-        <div className ="reconversion__card__separator">
-          <Card.Title className="reconversion__card__title">3 mois de socle en 8 saisons</Card.Title>
-          <Card.Text className="reconversion__card__text">
-            <span className="reconversion__card__text__strong">Première saison</span> <span className="reconversion__card__text__strong__second">(sem.01-02):</span> HTML / CSS / Git
-          </Card.Text>
-          
-          <Card.Text className="reconversion__card__text">
-            <span className="reconversion__card__text__strong">Seconde saison</span> <span className="reconversion__card__text__strong__second">(sem.02-04):</span> PHP / Client Serveur
-          </Card.Text>
-          
-          <Card.Text className="reconversion__card__text">
-            <span className="reconversion__card__text__strong">Troisième saison </span> <span className="reconversion__card__text__strong__second">(sem.04-05):</span> JavaScript / Dom
-          </Card.Text>
-          
-          <Card.Text className="reconversion__card__text">
-            <span className="reconversion__card__text__strong">Quatrième saison</span> <span className="reconversion__card__text__strong__second">(sem.06-07):</span> POO / SQL / RWD / bootstrap 
-          </Card.Text>
-          
-          <Card.Text className="reconversion__card__text">
-            <span className="reconversion__card__text__strong">Cinquième saison</span> <span className="reconversion__card__text__strong__second">(sem.08-09):</span> MVC / Composer / SEO / Git Avancé
-          </Card.Text>
-          
-          <Card.Text className="reconversion__card__text">
-            <span className="reconversion__card__text__strong">Sixième saison</span> <span className="reconversion__card__text__strong__second">(sem.10-11):</span> BackOffice / Sécurité
-          </Card.Text>
-          
-          <Card.Text className="reconversion__card__text">
-            <span className="reconversion__card__text__strong">Septième saison</span> <span className="reconversion__card__text__strong__second">(sem.12-13):</span> Framework / ORM / API / AJAX
-          </Card.Text>
-          
-          <Card.Text className="reconversion__card__text">
-            <span className="reconversion__card__text__strong">Huitième saison</span> <span className="reconversion__card__text__strong__second">(sem.13-14):</span> AdminSys / SSH / Deploiement / CMS
-          </Card.Text>
+    <Card.Title className="commercial__title" >
+      Un profil commercial avec plus de 5 années d'expérience ! 
+    </Card.Title>
+
+    <Card className="commercial__card">
+      <div className="commercial__experiences__img__container">
+        <Card.Title className="commercial__experiences__title">Le Socle</Card.Title>
+        <div className={open1 ? "commercial__experiences__img__selected" : "commercial__experiences__img number"} style={bgNumber} onMouseEnter={display1}>1</div>
+        <div className={open2 ? "commercial__experiences__img__selected" : "commercial__experiences__img number"} style={bgNumber} onMouseEnter={display2}>2</div>
+        <div className={open3 ? "commercial__experiences__img__selected" :"commercial__experiences__img number"} style={bgNumber} onMouseEnter={display3}>3</div>
+      </div>
+      <div className="commercial__experiences__text__container">
+
+        <div className={open1? "commercial__experiences__text" : "hidden"}>
+          <Card.Text className="commercial__experiences__title">1er Mois</Card.Text>
+          <Card.Title className="commercial__card__title">Employé Polyvalent</Card.Title>
+          <Card.Title className="commercial__card__title__second">2010 - 2012</Card.Title>
+          <Card.Text className="commercial__card__title__third">Contrat étudiant 15h / semaine</Card.Text>
+        </div>
+        <div className={open2 ? "commercial__experiences__text" : "hidden"}>
+          <Card.Text className="commercial__experiences__title">2ème mois</Card.Text>
+          <Card.Title className="commercial__card__title">Technico-Commercial BtoB en produit de nettoyage industriel</Card.Title>
+          <Card.Title className="commercial__card__title__second">2012 - 2013</Card.Title>
+          <Card.Text className="commercial__card__title__third">Contrat en apprentissage (1ère année de DUT Technique de Commercialisation)</Card.Text>
         </div>
 
-      <div className="separator__vertical"></div>
+        <div className={open3 ? "commercial__experiences__text" : "hidden"}>
+          <Card.Text className="commercial__experiences__title">3ème mois</Card.Text>
+          <Card.Title className="commercial__card__title">Téléprospecteur BtoB en informatique</Card.Title>
+          <Card.Title className="commercial__card__title__second">2013 - 2014</Card.Title>
+          <Card.Text className="commercial__card__title__third">Contrat en apprentissage (2ème année de DUT Technique de Commercialisation)</Card.Text>
+        </div>
 
-      <div className ="reconversion__card__separator">
-        <Card.Title className="reconversion__card__title">Puis 2 mois de spécialisation React</Card.Title>
-        <Card.Text className="reconversion__card__text">
-            <span className="reconversion__card__text__strong">Premier mois</span> <span className="reconversion__card__text__strong__second">(sem.15-16-17-18):</span> Travail intensif sur la découverte de React
-          </Card.Text>
-          
-          <Card.Text className="reconversion__card__text">
-            <span className="reconversion__card__text__strong">Second mois</span> <span className="reconversion__card__text__strong__second">(sem.19-20-21-22):</span> Mise en place d'un projet de groupe pour créer un site intégralement. Pour ma part, c'était sur Oldix, un concurrent de Netflix mais uniquement avec des Films libres de droits. Vous pouvez y accéder <a href="http://www.oldix.surge.sh" target="_blank">Juste ici</a>
-          </Card.Text>
+        <div className={openReact ? "commercial__experiences__text" : "hidden"}>
+          <Card.Text className="commercial__experiences__title">Lycée Gustave React Armentières</Card.Text>
+          <Card.Title className="commercial__card__title">Bac Sciences et Technologies en Laboratoire :<br></br> Option Physique</Card.Title>
+          <Card.Title className="commercial__card__title__second">2008 - 2010</Card.Title>
+          <Card.Text className="commercial__card__title__third">Obtenu</Card.Text>
+        </div>
+
+        <div className={openApo ? "commercial__experiences__text" : "hidden"}>
+          <Card.Text className="commercial__experiences__title">Apo Lille</Card.Text>
+          <Card.Title className="commercial__card__title">BTS Management des Unités Commerciales</Card.Title>
+          <Card.Title className="commercial__card__title__second">2010 - 2012</Card.Title>
+          <Card.Text className="commercial__card__title__third">Niveau</Card.Text>
+        </div>
+
+
       </div>
-      </Card>
+      <div className="commercial__experiences__img__container">
+        <Card.Title className="commercial__experiences__title">La spécialisation</Card.Title>
+        <Card.Img src={React} className={openReact ? "commercial__experiences__img__selected" : "commercial__experiences__img"} onMouseEnter={displayReact}></Card.Img>
+        <Card.Img src={oClock} className={openApo ? "commercial__experiences__img__selected" : "commercial__experiences__img"} onMouseEnter={displayApo}></Card.Img>
+        <div className="commercial__experiences__img__empty"></div>
+      </div>
+  </Card>
     </div>
-  </div>
-)
+)}
 
 export default Reconversion;

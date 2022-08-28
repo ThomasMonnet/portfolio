@@ -5,15 +5,35 @@
       border-radius: 15px;
       padding: 1rem;
       margin-top: 2rem; 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
     &__text {
       text-align: justify;
-      padding: 1rem
+      padding: 1rem;
+      width: 80%
     }
     &__title {
       font-size: 2rem;
       text-align: center;
-      margin-bottom: 1rem;
+      font-weight: 900;
+      margin-bottom: 2rem;
+      color: rgb(137, 0, 201);
+
+      &__second {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      &__third {
+        font-size: 1.2rem;
+        color: white;
+        text-align: center;
+      }
     }
   }
 
@@ -31,29 +51,54 @@
   &__experiences {
     &__text {
       display: flex;
+      flex-direction: column;
       justify-content: center;
     }
+
+    &__title {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-align: center;
+    }
     &__img {
-      width: 150px;
-      padding: 0.5rem;
-      height: auto;
+      width: 80px;
+      height: 80px;
+      padding: 0.3rem;
       border-radius: 100%;
       background-color: white;
       transform: scale(0.8);
       transition: 500ms;
-      border: 5px solid transparent;
+      //border: 5px solid transparent;
+      font-size: 4rem;
+      color:rgb(137, 0, 201);
+      text-align: center;
       &__container {
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
         margin-top: 2rem;
+        min-width: 150px;
+        height: 100%;
+      }
+
+      &__empty {
+        width: 80px;
+        height: 80px;
+        padding: 0.5rem;
+        border-radius:100%;
       }
 
       &__selected {
       background-color: white;
-      width: 150px;
-      padding: 0.5rem;
-      height: auto;
+      width: 80px;
+      padding: 0.3rem;
+      height: 80px;
       border-radius: 100%;
+      font-size: 4rem;
+      text-align: center;
+      color:rgb(137, 0, 201);
       border: 5px solid rgb(137, 0, 201);
       transform: scale(1.1);
       transition: 500ms;
@@ -66,4 +111,8 @@
 
 .hidden {
   display: none;
+}
+
+.number {
+  border: 5px solid #0AC2A7 !important;
 }

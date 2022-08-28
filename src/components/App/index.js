@@ -13,6 +13,7 @@ import Contact from 'src/components/Contact'
 import Menu from 'src/components/Menu'
 import Button from 'react-bootstrap/Button'
 import Commercial from 'src/components/Commercial'
+import Background from 'src/assets/img/background.png'
 
 // == Import des outils
 import { useState, useEffect } from 'react';
@@ -22,6 +23,7 @@ import { Routes, Route } from 'react-router-dom';
 const App = () => {
 
   const bgStyle = {
+    backgroundImage: `url(${Background})`,
     backgroundPosition: 'top',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -37,13 +39,13 @@ const [ welcome, setWelcome ] = useState(true);
 useEffect(() => {
   const valueWelcome = sessionStorage.getItem('new');
   if (valueWelcome == "true") {
-    const displayWelcome = setTimeout(() => {setWelcome(false), sessionStorage.setItem('new', 'false')}, 50000);
+    const displayWelcome = setTimeout(() => {setWelcome(false), sessionStorage.setItem('new', 'false')}, 13000);
   } if (valueWelcome == "false") {
     setWelcome(false)
   } else {
     setWelcome(true)
     sessionStorage.setItem('new', 'true');
-    const displayWelcome = setTimeout(() => {setWelcome(false), sessionStorage.setItem('new', 'false')}, 50000)
+    const displayWelcome = setTimeout(() => {setWelcome(false), sessionStorage.setItem('new', 'false')}, 13000)
   };
 }, []);
 
